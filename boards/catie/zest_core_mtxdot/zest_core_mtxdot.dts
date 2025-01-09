@@ -1,0 +1,44 @@
+/*
+ * Copyright (c) 2025 CATIE
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+/dts-v1/;
+#include <path/to/zephyr/soc/dts.dtsi>
+#include <path/to/module/hal/soc-pinctrl.dtsi>
+#include <zephyr/dt-bindings/input/input-event-codes.h>
+#include "sixtron_connector.dtsi"
+
+/ {
+	model = "CATIE Zest_Core_MTXDOT board";
+	compatible = "catie,zest-core-mtxdot";
+
+	chosen {
+		zephyr,console = &UART_OBJECT;
+		zephyr,shell-uart = &UART_OBJECT;
+		zephyr,sram = &sram0;
+		zephyr,flash = &flash0;
+	};
+
+	leds {
+		compatible = "gpio-leds";
+		led_0: led_0 {
+			gpios = <&GPIO_PORT PIN_NUMBER GPIO_ACTIVE_HIGH>;
+			label = "User LED0";
+		};
+	};
+
+	gpio_keys {
+		compatible = "gpio-keys";
+		user_button: button {
+			label = "User Button";
+			gpios = <&GPIO_PORT PIN_NUMBER GPIO_ACTIVE_LOW>;
+			zephyr,code = <INPUT_BTN_0>;
+		};
+	};
+
+	aliases {
+		led0 = &led_0;
+		sw0 = &user_button;
+	};
+};

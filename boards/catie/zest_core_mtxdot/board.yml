@@ -1,0 +1,11 @@
+board:
+  name: zest_core_mtxdot
+  vendor: catie
+  socs:
+    - name: stm32l151xc
+  revision:
+    format: "major.minor.patch"
+    default: "1.1.0"
+    exact: true
+    revisions:
+      - name: "1.1.0"

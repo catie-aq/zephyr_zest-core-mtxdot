@@ -1,0 +1,16 @@
+identifier: zest_core_mtxdot
+name: Zest_Core_MTXDOT
+type: mcu
+arch: arm
+toolchain:
+  - zephyr
+  - gnuarmemb
+ram: <RAM_IN_KBYTES>
+flash: <FLASH_IN_KBYTES>
+supported:
+  - gpio
+  - i2c
+  - spi
+  - pwm
+  - counter
+vendor: catie
