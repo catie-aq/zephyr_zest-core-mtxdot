@@ -2,4 +2,4 @@
 # SPDX-License-Identifier: Apache-2.0
 
 config BOARD_ZEST_CORE_MTXDOT
-	select SOC_stm32l151xc
+	select SOC_STM32L151XC
