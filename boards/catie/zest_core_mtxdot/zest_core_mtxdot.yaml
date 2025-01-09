@@ -5,8 +5,8 @@ arch: arm
 toolchain:
   - zephyr
   - gnuarmemb
-ram: <RAM_IN_KBYTES>
-flash: <FLASH_IN_KBYTES>
+ram: 32
+flash: 256
 supported:
   - gpio
   - i2c
