@@ -37,14 +37,14 @@ The Zephyr Zest_Core_MTXDOT board configuration supports the following hardware 
 | TIMER     | on-chip                                                                     | counter, pwm, timer                            |
 | UART      | on-chip                                                                     | serial                                         |
 | USART     | on-chip                                                                     | serial                                         |
-| USB       | [<SERIAL_ADAPTER_COMPONENT>](<LINK_TO_COMPONENT>)                           | console                                        |
+| USB       | [FT232RQ](https://ftdichip.com/products/ft232rq/)                           | console                                        |
 | USBOTG_FS | on-chip                                                                     | usb                                            |
 | VBAT      | on-chip                                                                     | sensor                                         |
 | VREF      | on-chip                                                                     | sensor                                         |
 | IWDG      | on-chip                                                                     | watchdog                                       |
 | WWDG      | on-chip                                                                     | watchdog                                       |
 
-See [<VENDOR_NAME> vendor bindings](https://docs.zephyrproject.org/latest/build/dts/api/bindings.html#<VENDOR_NAME>) for additional information.
+See [STMicroelectronics vendor bindings](https://docs.zephyrproject.org/latest/build/dts/api/bindings.html#dt-vendor-st) for additional information.
 
 ## Usage
 
