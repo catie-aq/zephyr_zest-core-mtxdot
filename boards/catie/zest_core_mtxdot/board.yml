@@ -5,7 +5,7 @@ board:
     - name: stm32l151xc
   revision:
     format: "major.minor.patch"
-    default: "1.1.0"
+    default: "1.0.0"
     exact: true
     revisions:
-      - name: "1.1.0"
+      - name: "1.0.0"

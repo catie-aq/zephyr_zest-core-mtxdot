@@ -1,6 +1,6 @@
 # Zest_Core_MTXDOT
 
-[Zest_Core_MTXDOT](https://6tron.io/zest_core/zest_core_mtxdot_1_1_0) board support for Zephyr OS.
+[Zest_Core_MTXDOT](https://6tron.io/zest_core/zest_core_mtxdot_1_0_0) board support for Zephyr OS.
 
 ## Dependencies
 
