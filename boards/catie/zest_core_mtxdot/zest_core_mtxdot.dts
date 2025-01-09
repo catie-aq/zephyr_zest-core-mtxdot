@@ -4,8 +4,8 @@
  */
 
 /dts-v1/;
-#include <path/to/zephyr/soc/dts.dtsi>
-#include <path/to/module/hal/soc-pinctrl.dtsi>
+#include <st/l1/stm32l151Xc.dtsi>
+#include <st/l1/stm32l151ccux-pinctrl.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 #include "sixtron_connector.dtsi"
 
@@ -14,8 +14,8 @@
 	compatible = "catie,zest-core-mtxdot";
 
 	chosen {
-		zephyr,console = &UART_OBJECT;
-		zephyr,shell-uart = &UART_OBJECT;
+		zephyr,console = &usart2;
+		zephyr,shell-uart = &usart2;
 		zephyr,sram = &sram0;
 		zephyr,flash = &flash0;
 	};
@@ -23,7 +23,7 @@
 	leds {
 		compatible = "gpio-leds";
 		led_0: led_0 {
-			gpios = <&GPIO_PORT PIN_NUMBER GPIO_ACTIVE_HIGH>;
+			gpios = <&gpioa 11 GPIO_ACTIVE_HIGH>;
 			label = "User LED0";
 		};
 	};
@@ -32,7 +32,7 @@
 		compatible = "gpio-keys";
 		user_button: button {
 			label = "User Button";
-			gpios = <&GPIO_PORT PIN_NUMBER GPIO_ACTIVE_LOW>;
+			gpios = <&gpioa 12 GPIO_ACTIVE_LOW>;
 			zephyr,code = <INPUT_BTN_0>;
 		};
 	};
@@ -41,4 +41,11 @@
 		led0 = &led_0;
 		sw0 = &user_button;
 	};
+};
+
+&usart2 {
+	pinctrl-0 = <&usart2_tx_pa2 &usart2_rx_pa3>;
+	pinctrl-names = "default";
+	current-speed = <115200>;
+	status = "okay";
 };
