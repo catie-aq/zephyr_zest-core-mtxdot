@@ -70,6 +70,17 @@
 	status = "okay";
 };
 
+&timers3 {
+	st,prescaler = <1>;
+	status = "okay";
+
+	pwm1: pwm {
+		pinctrl-0 = <&tim3_ch3_pb0>;
+		pinctrl-names = "default";
+		status = "okay";
+	};
+};
+
 &dac1 {
 	pinctrl-0 = <&dac_out1_pa4>;
 	pinctrl-names = "default";
