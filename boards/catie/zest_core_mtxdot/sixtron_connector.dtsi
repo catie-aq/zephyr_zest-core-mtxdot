@@ -34,7 +34,7 @@
 };
 
 sixtron_connector_1_can: &dummy_fdcan {};
-sixtron_connector_1_i2c: &dummy_i2c {};
+sixtron_connector_1_i2c: &i2c1 {};
 sixtron_connector_1_uart: &dummy_usart {};
 sixtron_connector_1_spi: &dummy_spi {};
 sixtron_connector_1_pwm: &dummy_timer {};
