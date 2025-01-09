@@ -47,13 +47,11 @@
     };
 };
 
-sixtron_connector_1_can: &dummy_fdcan {};
 sixtron_connector_1_i2c: &i2c1 {};
 sixtron_connector_1_uart: &usart1 {};
 sixtron_connector_1_spi: &spi2 {};
 sixtron_connector_1_dac: &dac1 {};
 
-sixtron_can: &sixtron_connector_1_can {};
 sixtron_i2c: &sixtron_connector_1_i2c {};
 sixtron_uart: &sixtron_connector_1_uart {};
 sixtron_spi: &sixtron_connector_1_spi {};
