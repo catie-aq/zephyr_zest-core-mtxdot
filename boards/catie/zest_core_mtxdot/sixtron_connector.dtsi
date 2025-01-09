@@ -39,7 +39,7 @@ sixtron_connector_1_uart: &usart1 {};
 sixtron_connector_1_spi: &spi2 {};
 sixtron_connector_1_pwm: &dummy_timer {};
 sixtron_connector_1_adc: &dummy_adc {};
-sixtron_connector_1_dac: &dummy_dac {};
+sixtron_connector_1_dac: &dac1 {};
 
 sixtron_can: &sixtron_connector_1_can {};
 sixtron_i2c: &sixtron_connector_1_i2c {};

@@ -69,3 +69,9 @@
 	cs-gpios = <&gpiob 12 GPIO_ACTIVE_LOW>;
 	status = "okay";
 };
+
+&dac1 {
+	pinctrl-0 = <&dac_out1_pa4>;
+	pinctrl-names = "default";
+	status = "okay";
+};
