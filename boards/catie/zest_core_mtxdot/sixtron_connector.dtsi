@@ -39,13 +39,18 @@
         pwm-map-pass-thru = <0x0 0xffffffff 0x0f>;
         pwm-map = <PWM1 0 0 &pwm1 3 0 0>;
     };
+
+    sixtron_connector_1_adc: sixtron-connector-1-adc {
+        compatible = "sixtron-adc";
+        #io-channel-cells = <1>;
+        io-channel-map = <ADC1 &adc1 5>;
+    };
 };
 
 sixtron_connector_1_can: &dummy_fdcan {};
 sixtron_connector_1_i2c: &i2c1 {};
 sixtron_connector_1_uart: &usart1 {};
 sixtron_connector_1_spi: &spi2 {};
-sixtron_connector_1_adc: &dummy_adc {};
 sixtron_connector_1_dac: &dac1 {};
 
 sixtron_can: &sixtron_connector_1_can {};
