@@ -54,7 +54,7 @@ See [STMicroelectronics vendor bindings](https://docs.zephyrproject.org/latest/b
 
 > [!CAUTION]
 >
-> In order to use an external antenna on the UFL connector app.overlay needs to be setup as follow:
+> To use an external antenna on the U.FL connector, the device tree needs to be configured as follow:
 >
 > ```
 > &lora: {
