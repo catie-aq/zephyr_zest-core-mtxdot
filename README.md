@@ -51,3 +51,13 @@ See [STMicroelectronics vendor bindings](https://docs.zephyrproject.org/latest/b
 1. Add the Zest_Core_MTXDOT board to your workspace using the [6TRON module](https://github.com/catie-aq/zephyr_6tron-manifest.git).
 2. Compile and flash application using `west` tool:
    - Board name: `zest_core_mtxdot`
+
+> [!CAUTION]
+>
+> In order to use an external antenna on the UFL connector app.overlay needs to be setup as follow:
+>
+> ```
+> &lora: {
+>    power-amplifier-output = "rfo";
+> };
+> ```
